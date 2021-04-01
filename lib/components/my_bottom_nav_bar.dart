@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nurseryhut/loginscreen/screen/sign_in/components/sign_form.dart';
+
 import '../constants.dart';
 import 'package:nurseryhut/profilepage/lib/profile.dart';
 
@@ -35,11 +37,19 @@ class MyBottomNavBar extends StatelessWidget {
           ),
           IconButton(
             icon: SvgPicture.asset("assets/icons/wishlist.svg"),
-            onPressed: () {} ,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SignForm()
+                ),
+              );
+
+            } ,
           ),
           IconButton(
             icon: SvgPicture.asset("assets/icons/cart.svg"),
-            onPressed: () {} ,
+            onPressed: () {
+            } ,
           ),
           IconButton(
             icon: SvgPicture.asset("assets/icons/user.svg"),

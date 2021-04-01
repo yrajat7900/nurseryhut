@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/custom_surfix_icon.dart';
-import 'package:shop_app/components/form_error.dart';
-import 'package:shop_app/helper/keyboard.dart';
-import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
-import 'package:shop_app/screens/login_success/login_success_screen.dart';
+import 'package:nurseryhut/loginscreen/components/custom_surfix_icon.dart';
+import 'package:nurseryhut/loginscreen/components/form_error.dart';
+import 'package:nurseryhut/loginscreen/screen/forgot_password/forgot_password_screen.dart';
 
 import '../../../components/default_button.dart';
-import '../../../constants.dart';
+import '../../../const.dart';
 import '../../../size_config.dart';
+
 
 class SignForm extends StatefulWidget {
   @override
@@ -15,6 +14,7 @@ class SignForm extends StatefulWidget {
 }
 
 class _SignFormState extends State<SignForm> {
+
   final _formKey = GlobalKey<FormState>();
   String email;
   String password;
@@ -72,15 +72,9 @@ class _SignFormState extends State<SignForm> {
           SizedBox(height: getProportionateScreenHeight(20)),
           DefaultButton(
             text: "Continue",
-            press: () {
-              if (_formKey.currentState.validate()) {
-                _formKey.currentState.save();
-                // if all are valid then go to success screen
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
-              }
-            },
-          ),
+            press: () {}
+    )
+
         ],
       ),
     );
@@ -147,7 +141,7 @@ class _SignFormState extends State<SignForm> {
         // If  you are using latest version of flutter then lable text and hint text shown like this
         // if you r using flutter less then 1.20.* then maybe this is not working properly
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/email.svg"),
       ),
     );
   }

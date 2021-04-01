@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/screens/sign_up/sign_up_screen.dart';
+import 'package:nurseryhut/loginscreen/screen/sign_up/sign_up_screen.dart';
+
 
 import '../const.dart';
 import '../size_config.dart';
